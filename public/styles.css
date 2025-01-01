@@ -67,10 +67,16 @@ body{
 p{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
+    display : flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pass{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-size: large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
