@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="box">
+        <div class = "box1"><h1 class = "welcome">Welcome to Random password generator!</h1>
+    </div>
+</div>
+    <form action="/generate" method="POST">
+        <div>
+            <label for="length" id="length">Password length</label>
+            <input type="number" name="length" id="len" min="1" max="100" required>
+        </div>
+
+
+        <div>
+            <input type="checkbox" name="exclude_numbers" id="exclude_numbers">
+            <label for="exclude_numbers" id="exclude_numbers">Exclude numbers</label>
+        </div>
+
+
+        <div>
+            <input type="checkbox" name="exclude_special_chars" id="exclude_special_chars">
+            <label for="exclude_special_chars" id="exclude_special_chars">Exclude special characters</label>
+        </div>
+
+        <div class="s1"><div>
+            <button type="submit" class="submit">Generate password</button>
+        </div></div>
+        
+    </form>
+    <h2><% if (locals.password){ %>
+        <p class="pass">Generated Password : 
+            <%= password %>
+        </p>
+    <% } else { %>
+        <p>
+            Click the button for a new password!
+        </p>
+    <% } %></h2>
+</body>
+</html>
